@@ -38,7 +38,7 @@ public class gameDeck {
         //shuffle
         int keeper1;
         String keeper2;
-        for (int i = gameDeck.length - 1; i>-1 ; i--) {
+        for (int i = gameDeck.length - 1; i > -1; i--) {
             int a = r.nextInt(gameDeck.length);
             keeper1 = gameDeck[i];
             gameDeck[i] = gameDeck[a];
