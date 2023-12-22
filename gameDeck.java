@@ -1,7 +1,7 @@
 import java.util.Random;
 public class gameDeck {
     Random r = new Random();
-    public int [] gameDeck = new int [40];
+    public int [] gameDeck = new int [40];//!!
 
     //values of cards
     public int [] value = {1,2,3,4,5,6,7,8,9,10};
@@ -13,7 +13,7 @@ public class gameDeck {
     public String YELLOW = "\u001B[33m";
     public String BLUE = "\u001B[34m";
     public String [] paint = {RED, GREEN, YELLOW, BLUE};
-    public String [] colors = new String [40];
+    public String [] colors = new String [40]; //!!
 
     //signs
     public int [] sign = {1, -1};
@@ -33,7 +33,7 @@ public class gameDeck {
             colors[i + 10] = GREEN;
             colors[i + 20] = YELLOW;
             colors[i + 30] = BLUE;
-            //there will be an if condition. if(colors[i].equals(...)) print(...+String.valueOf(gameDeck[i])+RESET)
+
         }
         //shuffle
         int keeper1;
