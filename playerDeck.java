@@ -24,31 +24,31 @@ public class playerDeck {
 
         }
 
-        int nextuser = 5;
-        while (nextuser != 8) {
+        int nextUser = 5;
+        while (nextUser != 8) {
             int rValue = r.nextInt(6) + 1;
             int rSign = r.nextInt(2);
             int rColor = r.nextInt(4);
-            userDeck[nextuser] = rValue * game.sign[rSign];
-            readableUserDeck[nextuser] = game.paint[rColor] + userDeck[nextuser] + game.RESET;
-            nextuser++;
+            userDeck[nextUser] = rValue * game.sign[rSign];
+            readableUserDeck[nextUser] = game.paint[rColor] + userDeck[nextUser] + game.RESET;
+            nextUser++;
         }
 
-        while (nextuser != 10) {
+        while (nextUser != 10) {
             int chance = r.nextInt(5);
             if (chance < 4) { //%80
                 int rValue = r.nextInt(6) + 1;
                 int rSign = r.nextInt(2);
                 int rColor = r.nextInt(4);
-                userDeck[nextuser] = rValue * game.sign[rSign];
-                readableUserDeck[nextuser] = game.paint[rColor] + userDeck[nextuser] + game.RESET;
-                nextuser++;
+                userDeck[nextUser] = rValue * game.sign[rSign];
+                readableUserDeck[nextUser] = game.paint[rColor] + userDeck[nextUser] + game.RESET;
+                nextUser++;
             }
             else { //%20
                 int specialChance = r.nextInt(2);
-                userDeck[nextuser] = game.eqForSpecial[specialChance];
-                readableUserDeck[nextuser] = game.special[specialChance];
-                nextuser++;
+                userDeck[nextUser] = game.eqForSpecial[specialChance];
+                readableUserDeck[nextUser] = game.special[specialChance];
+                nextUser++;
             }
         }
 
@@ -61,31 +61,31 @@ public class playerDeck {
             top++;
         }
 
-        int nextcomp = 5;  //next 6,7,8. cards
-        while (nextcomp != 8) {
+        int nextComp = 5;  //next 6,7,8. cards
+        while (nextComp != 8) {
             int rValue = r.nextInt(6) + 1;
             int rSign = r.nextInt(2);
             int rColor = r.nextInt(4);
-            computerDeck[nextcomp] = rValue * game.sign[rSign];
-            readableComputerDeck[nextcomp] = game.paint[rColor] + computerDeck[nextcomp] + game.RESET;
-            nextcomp++;
+            computerDeck[nextComp] = rValue * game.sign[rSign];
+            readableComputerDeck[nextComp] = game.paint[rColor] + computerDeck[nextComp] + game.RESET;
+            nextComp++;
         }
 
-        while (nextcomp != 10) {  //9. and 10. cards
+        while (nextComp != 10) {  //9. and 10. cards
             int chance = r.nextInt(5);
             if (chance < 4) { //%80
                 int rValue = r.nextInt(6) + 1;
                 int rSign = r.nextInt(2);
                 int rColor = r.nextInt(4);
-                computerDeck[nextcomp] = rValue * game.sign[rSign];
-                readableComputerDeck[nextcomp] = game.paint[rColor] + computerDeck[nextcomp] + game.RESET;
-                nextcomp++;
+                computerDeck[nextComp] = rValue * game.sign[rSign];
+                readableComputerDeck[nextComp] = game.paint[rColor] + computerDeck[nextComp] + game.RESET;
+                nextComp++;
             }
             else { //%20
                 int specialChance = r.nextInt(2);
-                computerDeck[nextcomp] = game.eqForSpecial[specialChance];
-                readableComputerDeck[nextcomp] = game.special[specialChance];
-                nextcomp++;
+                computerDeck[nextComp] = game.eqForSpecial[specialChance];
+                readableComputerDeck[nextComp] = game.special[specialChance];
+                nextComp++;
             }
         }
         for(int i=0; i<currentGameDeck.length; i++){
