@@ -14,16 +14,37 @@ public class playerHand {
     public playerHand(){
         Random r = new Random();
 
+
+        int keeper1;
+        String keeper2;
+        for (int i = player.userDeck.length - 1; i > -1; i--) {
+            int a = r.nextInt(player.userDeck.length);
+            keeper1 = player.userDeck[i];
+            player.userDeck[i] = player.userDeck[a];
+            player.userDeck[a] = keeper1;
+            keeper2 = player.readableUserDeck[i];
+            player.readableUserDeck[i] = player.readableUserDeck[a];
+            player.readableUserDeck[a] = keeper2;
+        }
         for(int i=0; i<userHand.length; i++){
-            int rand = r.nextInt(player.userDeck.length);
-            userHand[i] = player.userDeck[rand];
-            readableUserHand[i] = player.readableUserDeck[rand];
+            userHand[i] = player.userDeck[i];
+            readableUserHand[i] = player.readableUserDeck[i];
         }
 
+        int keeper3;
+        String keeper4;
+        for (int i = player.computerDeck.length - 1; i > -1; i--) {
+            int a = r.nextInt(player.computerDeck.length);
+            keeper3 = player.computerDeck[i];
+            player.computerDeck[i] = player.computerDeck[a];
+            player.computerDeck[a] = keeper3;
+            keeper4 = player.readableComputerDeck[i];
+            player.readableComputerDeck[i] = player.readableComputerDeck[a];
+            player.readableComputerDeck[a] = keeper4;
+        }
         for(int i=0; i<computerHand.length; i++){
-            int rand = r.nextInt(player.computerDeck.length);
-            computerHand[i] = player.computerDeck[rand];
-            readableComputerHand[i] = player.readableComputerDeck[rand];
+            computerHand[i] = player.computerDeck[i];
+            readableComputerHand[i] = player.readableComputerDeck[i];
         }
 
         for(int i=0; i<currentGameDeck.length; i++){
